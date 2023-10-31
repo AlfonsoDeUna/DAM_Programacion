@@ -3,7 +3,7 @@
 Tkinter es una interfaz de Python para la biblioteca gráfica Tk.
 
 ## Agregar a la librería 
-´´´python
+```python
 from Tkinter import *
 
-´´´
+```
