@@ -158,7 +158,7 @@ def main():
   root.mainloop() # Start the event loop
 ```
 
-## Layout
+# Layout
 
 El layout como distribuimos los elementos gráficos o widgets en pantalla como se distribuyen
 
@@ -166,7 +166,7 @@ Con el método pack, podemos disitrubir los elementos en la pantalla
 
 myWidget.pack(side=LEFT)
 
-´´´python
+```python
 #pack_sample.py
 from Tkinter import *
 
@@ -192,3 +192,12 @@ main()
 ```
 
 ### EJERCICIO: Crea varios botones para que se puedan distruibir en la pantalla LEFT, BOTTOM, RIGHT, TOP
+
+# FRAMES
+Son  estructuras para almacenar otros widgets dentro de ellos, son como padres de otros elementos
+
+# CAPTURAR LOS EVENTOS DE RATÓN
+
+# CREAR UN MESAGEBOX 
+
+# DIÁLOGOS DE ENTRADA DE DATOS
