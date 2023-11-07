@@ -92,7 +92,8 @@ La diferencia entre `c.all_contacts` y `self.all_contacts` es un concepto import
    - Explique que `all_contacts` es un atributo de la clase `Contact`, lo que significa que es compartido por todas las instancias de `Contact` y sus clases derivadas, como `Supplier`.
 
 ```python
-print(Contact.all_contacts)  # Mostrará todas las instancias de Contact y Supplier
+for i in Contact.all_contacts:
+    print (i.name)
 ```
 
 2. **Acceso a través de una Instancia**:
