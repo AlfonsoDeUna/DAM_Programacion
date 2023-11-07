@@ -48,6 +48,8 @@ class Contact:
 class Supplier(Contact):
     def order(self, order):
         print("Si este fuera un sistema real, enviaríamos el pedido '{}' a '{}'".format(order, self.name))
+
+s = Proveedor ("pepe", "pepe@123.com")
 ```
 
 ### Ejercicio 3: Instanciar y Trabajar con Objetos
