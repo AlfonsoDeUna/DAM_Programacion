@@ -215,7 +215,33 @@ print([c.name for c in Contact.all_contacts.search('John')])  # Debería imprimi
 ```python
 print([] == list())  # Debería imprimir True
 ```
+### Ejemplo final:
+```python
+class contactList (list):
+            
+    def search (self, name):
+        matching_contacts = []
+        for contact in self:
+            if contact.name == name:
+                matching_contacts.append(contact.name)
+        return matching_contacts        
+    
+class Contact:
+    all_contacts = contactList()
 
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.all_contacts.append(self)    
+    
+        
+c1 = Contact ("Daniel", "dani@lagomar.es")
+c2 = Contact ("Angel", "angel@lagomar.es")
+c3 = Contact ("Mario", "mario@lagomar.es")
+
+print (Contact.all_contacts.search("Mario"))
+
+```
 1. **Sintaxis Azucarada (Syntax Sugar)**:
    - La sintaxis `[]` es una forma abreviada y más legible de crear una lista, pero en realidad, lo que ocurre detrás de escena es que se llama al constructor `list()`. Esta simplificación se conoce como "sintaxis azucarada" porque hace el código más "dulce" o agradable a la vista, sin agregar funcionalidad nueva.
 
