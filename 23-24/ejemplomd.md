@@ -3,6 +3,11 @@
 
 **esto es negrita**
 
+| Color | Código |
+| ----------- | ----------- |
+| Rojo | #FF0000 |
+| Azul | #0000FF |
+
 * elemento 1
 * elemento 2
 * elemento 3
