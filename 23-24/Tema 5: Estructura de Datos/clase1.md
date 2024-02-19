@@ -33,6 +33,24 @@
   Ordena los elementos de la lista in situ (los argumentos pueden ser usados para personalizar el orden de la lista, ver sorted() para su explicación).
 
 * list.reverse()
+
+---
+### Ejercicio. Crea un programa en python utilizando todos los tipos de métodos que muestro en este tema
+---
+
+## Listas como Pilas
+  
+  Los métodos de lista hacen que resulte muy fácil usar una lista como una pila, donde el último elemento añadido es el primer elemento retirado («último en entrar, primero en salir»). Para agregar un elemento a la cima 
+  de la pila, utiliza append(). Para retirar un elemento de la cima de la pila, utiliza pop() sin un índice explícito.
+
+  ```python
+
+  ```
+
+
+  
+
+
   Invierte los elementos de la lista in situ.
 
 * list.copy()
