@@ -1,5 +1,4 @@
-# Clase 01/02/2024
-
+# Clase 
 ## Repaso de programación orientada a objetos
 
 ``` python
