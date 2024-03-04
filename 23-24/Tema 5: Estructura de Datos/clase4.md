@@ -17,7 +17,7 @@ print(collections.Counter(a=2, b=3, c=1))
 
 ```
 
-#### Actualizar
+### Actualizar
 
 ```python
 import collections
@@ -43,7 +43,7 @@ for letter in 'abcde':
     print('{} : {}'.format(letter, c[letter]))
 ```
 
-#### operaciones
+### operaciones
 
 ```python
 import collections
