@@ -1,4 +1,4 @@
-# Lectura y escritura de información:
+# Lectura y escritura de información: 
 
 ## Contenido
 Flujos (streams):
