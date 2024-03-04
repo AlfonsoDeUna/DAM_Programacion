@@ -1,6 +1,6 @@
 # Collections Jerarquía de estructura de datos
 
-## Counter
+# Counter
 
 Un Counter es un contenedor que registra cuántas veces se agregan valores equivalentes. Se puede usar para implementar los mismos algoritmos para los cuales otros lenguajes comúnmente usan una bolsa o una estructuras de conjunto múltiple.
 
@@ -65,4 +65,18 @@ print(c1 & c2)
 
 print('\nUnion (taking maximums):')
 print(c1 | c2)
+```
+
+# DefaultDict
+
+Ejemplo:
+
+```python
+s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
+d = defaultdict(list)
+for k, v in s:
+    d[k].append(v)
+
+sorted(d.items())
+
 ```
