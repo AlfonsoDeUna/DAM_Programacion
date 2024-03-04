@@ -1,1 +1,1 @@
-# Python Collections Module
+# Array — Secuencia de datos de tipo fijo
