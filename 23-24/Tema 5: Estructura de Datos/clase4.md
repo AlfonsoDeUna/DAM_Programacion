@@ -1,6 +1,15 @@
 # Python Collections Module
 # Collections Jerarquía de estructura de datos
 
+| collections |
+|-------------|
+| Counter     |
+| DefaultDict |
+| ChainMap    |
+| Deque       |
+| namedtuple  |
+| OrderedDict |
+
 # Counter
 
 Un Counter es un contenedor que registra cuántas veces se agregan valores equivalentes. Se puede usar para implementar los mismos algoritmos para los cuales otros lenguajes comúnmente usan una bolsa o una estructuras de conjunto múltiple.
