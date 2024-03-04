@@ -1,3 +1,4 @@
+# Python Collections Module
 # Collections Jerarquía de estructura de datos
 
 # Counter
