@@ -80,3 +80,15 @@ for k, v in s:
 sorted(d.items())
 
 ```
+
+# ChainMap
+
+maneja una secuencia de diccionarios, y busca a través de ellos en el orden en que se les da para encontrar valores asociados con llaves. Un ChainMap hace un buen contenedor de «contexto», ya que se puede tratar como una pila para la cual ocurren cambios a medida que la pila crece, con estos cambios siendo descartados nuevamente a medida que la pila se reduce.
+
+# Deque
+
+Una cola doblemente terminada, o deque, admite agregar y eliminar elementos de cualquier extremo de la cola. Las pilas y colas más comunes son formas degeneradas de deques, donde las entradas y salidas están restringida a un solo extremo.
+
+# namedtuple — Subclase de tupla con campos con nombre
+
+# OrderedDict — Recuerde el orden en que las claves se agregan a un diccionario
