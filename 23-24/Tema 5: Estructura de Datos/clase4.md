@@ -103,6 +103,17 @@ print(list(c.elements()))
 3. Escribe un programa que busque los elementos más comunes y que cuente el número de ocurrencias en un texto
    ¿Qué método existe en Counter para buscar las más comunes?
 
+4. Ejercicio a partir de un fichero que lea el texto de un libro nos de el número de veces que aparece la palabra en el texto.
+```python
+from collections import Counter
+
+with open("./el_quijote.txt","r",encoding="iso-8859-1") as f:
+    texto = f.read()
+    texto = texto.split(" ")
+    c = Counter (texto)
+    print (c.most_common(30))
+```   
+
 # DefaultDict
 
 Es una subclase de dict, diseñada para cuando no tienes claves. La principal diferencia entre dict y defaultdict es que cuando tienes que crear
