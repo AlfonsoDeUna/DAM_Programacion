@@ -1,4 +1,9 @@
 # Python Collections Module
+
+Ya hemos visto los tipos de estrcuturas básicas de python, tuplas, listas y diccionarios para organizar y almacenar información. Collections se ha creado para tener estructuras que son más eficientes para trabajar con ellas.
+
+Y te ayudan a trabajar con tuples, diccionarios y listas. Por ejemplo, usaremos namedtuples para crear tuplas con campos con nombre, defaultdict para agrupar de forma concisa la información en diccionarios, y deque para añadir elementos de forma eficiente a cualquier lado de un objeto lista.
+
 # Collections Jerarquía de estructura de datos
 
 | collections |
@@ -76,6 +81,12 @@ print(c1 & c2)
 print('\nUnion (taking maximums):')
 print(c1 | c2)
 ```
+
+## Ejercicios
+
+1. Escribe un programa para iterar sobre una serie de números tantas veces como le indiquemos.
+2. Escribe un programa que busque los elementos más comunes y que cuente el número de ocurrencias en un texto
+   ¿Qué método existe en Counter para buscar las más comunes?
 
 # DefaultDict
 
