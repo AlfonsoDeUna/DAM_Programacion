@@ -1,6 +1,9 @@
 # Clase 21/02/2025
 
-## Estructuras de Datos
+# Estructuras de Datos
+
+Las estructuras de datos nos proporcionan una manera para organizar y almacenar datos en memoria. 
+Python 3 tiene varias estrcuturas de datos integradas, incluyendo tuplas, diccionarios y listas.
 
 ## Repaso a Listas y más cosas
 
