@@ -90,7 +90,10 @@ print(c1 | c2)
 
 # DefaultDict
 
-Ejemplo:
+Es una subclase de dict, diseñada para cuando no tienes claves. La principal diferencia entre dict y defaultdict es que cuando tienes que crear
+un diccionario y no tienes valores para una clave te crea un valor por defecto.
+
+### Ejemplo:
 
 ```python
 s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
@@ -101,6 +104,97 @@ for k, v in s:
 sorted(d.items())
 
 ```
+
+
+#### Ejemplo. ¿Qué ocurre si creas el siguiente código?
+```python
+def_dict=defaultdict(list())
+``` 
+
+#### Ejercicio. Crea un defaultdict contando las palabras de un fichero de texto
+código de ejemplo
+```python
+from collections import defaultdict
+word_counts = defaultdict(int)
+for word in lines:
+    word_counts[word] += 1
+```
+
+#### Ejercicio: Agrupaciones con defaultdict
+
+```python
+dep = [('Ventas', 'PePe Doe'),
+       ('Ventas', 'Aaron Smith'),
+       ('Administración', 'Jaime Doe'),
+       ('Marketing', 'Eli Smith'),
+       ('Marketing', 'Alfonso Doe')]
+
+from collections import defaultdict
+
+dep_dd = defaultdict(list)
+
+for department, employee in dep:
+    dep_dd[department].append(employee)
+
+dep_dd
+```
+
+Añade un valor repetido a la lista origina y observa que ocurre
+
+#### Ejercicio Agregaciones.
+```python
+incomes = [('Books', 1250.00),
+           ('Books', 1300.00),
+           ('Books', 1420.00),
+           ('Tutorials', 560.00),
+           ('Tutorials', 630.00),
+           ('Tutorials', 750.00),
+           ('Courses', 2500.00),
+           ('Courses', 2430.00),
+           ('Courses', 2750.00),]
+# enter float as argument        
+dd = defaultdict(float)  # collections.defaultdict
+for product, income in incomes:
+    dd[product] += income
+# defaultdict(float, {'Books': 3970.0, 'Tutorials': 1940.0, 'Courses': 7680.0})
+for product, income in dd.items():
+    print(f"Total income for {product}: ${income:,.2f}")
+```
+
+#### Ejercicio: A partir de un Excel abre un excel en python carga los valores en una lista y utiliza la agregación para sumar una columna
+
+Importa la librería openyxl
+```python
+pip install openpyxl
+```
+código de ejemplo
+```python
+
+# Import openpyxl 
+import openpyxl 
+  
+# Open the spreadsheet 
+workbook = openpyxl.load_workbook("data.xlsx") 
+  
+# Get the first sheet 
+sheet = workbook.worksheets[0] 
+  
+# Create a list to store the values 
+names = [] 
+  
+# Iterate over the rows in the sheet 
+for row in sheet: 
+    # Get the value of the first cell 
+    # in the row (the "Name" cell) 
+    name = row[0].value 
+    # Add the value to the list 
+    names.append(name) 
+  
+# Print the list of names 
+print(names)
+```
+
+
 
 # ChainMap
 
