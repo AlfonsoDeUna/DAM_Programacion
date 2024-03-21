@@ -85,7 +85,22 @@ print(c1 | c2)
 ## Ejercicios
 
 1. Escribe un programa para iterar sobre una serie de números tantas veces como le indiquemos.
-2. Escribe un programa que busque los elementos más comunes y que cuente el número de ocurrencias en un texto
+
+```python
+from collections import Counter
+d = {
+    "a":2,
+    "b":4
+}
+c1 = Counter (d)
+valor = input ("damevalor")
+c = Counter(a=int(valor), b=3, c=2, d=2)
+
+# Print the elements in th2e Counter 'c' as a list
+print(list(c.elements()))
+```
+   
+3. Escribe un programa que busque los elementos más comunes y que cuente el número de ocurrencias en un texto
    ¿Qué método existe en Counter para buscar las más comunes?
 
 # DefaultDict
