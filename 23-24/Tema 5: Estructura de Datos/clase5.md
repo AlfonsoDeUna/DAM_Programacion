@@ -112,3 +112,6 @@ insert (posición y elemento)
 
 ## borrar un elemento de una posición
 * con el método remove (posicion)
+
+#### Ejercicio: Como eliminar un valor concreto de la lista en una sola línea
+arr2.remove (arr.index(111))
