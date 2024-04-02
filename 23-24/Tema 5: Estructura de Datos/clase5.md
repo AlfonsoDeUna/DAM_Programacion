@@ -117,3 +117,8 @@ insert (posición y elemento)
 ```python
 arr2.pop (arr.index(111))
 ```
+
+#### Sacar el elemento de la posición 3
+```pytyhon
+arr2[3]
+```
