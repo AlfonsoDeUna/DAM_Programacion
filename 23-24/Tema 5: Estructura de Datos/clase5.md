@@ -99,5 +99,5 @@ print ("La posición del elemento 111 es: " + str (arr2.index(111)))
 insert (posición y elemento)
 
 #### Ejercicios de ejemplo:
-#### añade en la posición 4 el elemento 44
-#### añade en la posición 10 el elemento 100
+* añade en la posición 4 el elemento 44
+* añade en la posición 10 el elemento 100
