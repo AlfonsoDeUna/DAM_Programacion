@@ -1,1 +1,65 @@
 # Array — Secuencia de datos de tipo fijo
+
+## ESTRUCTURAS DE DATOS EN PYTHON
+
+## LISTAS, DICCIONARIOS. POR DEFECTO EN PYTHON
+
+## UTILIZAR LISTAS HAY CASOS EN LOS QUE CONVIENE UTILIZAR ARRAYS, ARREGLOS
+
+### VENTAJA DE UTILIZAR LISTAS: FLEXIBILIDAD PERO CON MUCHOS DATOS NO SON EFICIENTES
+### VENTAJA DE UTILIZAR ARRAYS: ES QUE ESTÁN HECHOS PARA SER EFICIENTES PERO NO SON TAN FLEXIBLES. 
+
+
+El módulo array define una estructura de datos de secuencia que se ve muy parecida a una list, excepto que todos los miembros tienen que ser del mismo tipo primitivo. Los tipos admitidos son todos numéricos u otros tipos primitivos de tamaño fijo como bytes.
+
+* https://rico-schmidt.name/pymotw-3/array/index.html
+
+#### Ejemplo
+
+```python
+import array
+import binascii
+
+s = b'This is the array.'
+a = array.array('b', s)
+
+print('As byte string:', s)
+print('As array      :', a)
+print('As hex        :', binascii.hexlify(a))
+```
+
+## IMPORTAR 
+
+```python
+import python
+```
+
+## CREAR ELEMENTOS EN EL ARRAY DESDE UNA LISTA
+
+```python
+
+# tipos enteros B y b
+arr1 = array.array ('B', [1,4,1,4,11])
+
+
+arr2 = array.array('B', range(10))
+print (arr2)
+```
+
+## AÑADIR MÁS ELEMENTOS A UN ARRAY EXTEND
+```python
+# añadir elementos al array
+arr2.extend (range(3))
+print (arr2)
+```
+
+## SABER EL TIPO DEL ARRAY EL PARÁMETRO TYPECODE Y EL TAMAÑO DEL TIPO ITEMSIZE
+```python
+
+
+# me dice el tipo de array
+print (arr2.typecode)
+
+# preguntar por el tamaño de cada elemento en el array en bytes
+print (arr2.itemsize)
+```
