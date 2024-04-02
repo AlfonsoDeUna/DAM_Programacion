@@ -86,3 +86,18 @@ len() utiliza el método magic __len__
 print (len(arr2))
 
 ```
+
+## Buscar la posición que ocupa un elemento en el array
+arr.index(elemento)
+
+``` python
+## posición de un elemento en el array
+arr2.index(111)
+print ("La posición del elemento 111 es: " + str (arr2.index(111)))
+```
+## añadir un elemento en una posición que queramos
+insert (posición y elemento)
+
+#### Ejercicios de ejemplo:
+#### añade en la posición 4 el elemento 44
+#### añade en la posición 10 el elemento 100
