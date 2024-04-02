@@ -64,6 +64,25 @@ print (arr2.typecode)
 print (arr2.itemsize)
 ```
 ---
-#### Ejercicio crea una lista con decimales
-pista: 'f' y 'd'
+#### Ejercicio crea una lista con decimales pista: 'f' y 'd'
 ---
+
+## OPERACIONES BÁSICAS CON ARRAYS
+
+# AÑADIR NUEVOS ELEMENTOS
+método append(elemento)
+
+```python
+# añadir elementos
+arr2.append(111)
+print (arr2)
+```
+
+## longitud o número de elementos de un array
+len() utiliza el método magic __len__
+
+#### Ejercicio: Obten la longitud e la lista de ejemplo
+```
+print (len(arr2))
+
+```
