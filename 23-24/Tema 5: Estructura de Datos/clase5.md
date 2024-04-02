@@ -122,3 +122,22 @@ arr2.pop (arr.index(111))
 ```pytyhon
 arr2[3]
 ```
+#### Obtener el elemento de la última posición
+```python
+print (arr2[-1])
+```
+#### Ejercicio: quiero que el contenido de mi array pasarlo a un fichero que se llama salida.txt
+
+f = open ("salida.txt",'wb')
+arr2.tofile(f)
+f.close()
+
+#### Quiero pasar el fichero salida.txt a un array que se llama salida
+f = open ("salida.txt","rb")
+salida = array.array("B",[])
+try:
+    salida.fromfile(f,100)
+except EOFError:
+    print (salida) 
+f.close()
+
