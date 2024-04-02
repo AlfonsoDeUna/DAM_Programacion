@@ -63,3 +63,7 @@ print (arr2.typecode)
 # preguntar por el tamaño de cada elemento en el array en bytes
 print (arr2.itemsize)
 ```
+---
+#### Ejercicio crea una lista con decimales
+pista: 'f' y 'd'
+---
