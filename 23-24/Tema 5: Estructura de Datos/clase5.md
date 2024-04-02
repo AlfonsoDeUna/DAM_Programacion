@@ -110,10 +110,10 @@ insert (posición y elemento)
 ## invertir el array
 * con el método reverse()
 
-## borrar un elemento de una posición
-* con el método remove (posicion)
+## borrar un elemento de un valor dado
+* con el método remove (elemento)
 
 #### Ejercicio: Como eliminar un valor concreto de la lista en una sola línea
 ```python
-arr2.remove (arr.index(111))
+arr2.pop (arr.index(111))
 ```
