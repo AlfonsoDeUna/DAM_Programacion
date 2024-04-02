@@ -114,4 +114,6 @@ insert (posición y elemento)
 * con el método remove (posicion)
 
 #### Ejercicio: Como eliminar un valor concreto de la lista en una sola línea
+```python
 arr2.remove (arr.index(111))
+```
