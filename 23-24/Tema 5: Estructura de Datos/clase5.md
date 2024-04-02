@@ -101,3 +101,14 @@ insert (posición y elemento)
 #### Ejercicios de ejemplo:
 * añade en la posición 4 el elemento 44
 * añade en la posición 10 el elemento 100
+
+## Como utilizar el array como pila con pop()
+
+* pop() obtienes el último elemento
+* pop(posición) saca de la lista el element de la posicion que le damos como parámetro
+
+## invertir el array
+* con el método reverse()
+
+## borrar un elemento de una posición
+* con el método remove (posicion)
