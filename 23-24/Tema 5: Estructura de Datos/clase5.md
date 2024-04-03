@@ -115,7 +115,7 @@ insert (posición y elemento)
 
 #### Ejercicio: Como eliminar un valor concreto de la lista en una sola línea
 ```python
-arr2.pop (arr.index(111))
+arr2.pop (arr2.index(111))
 ```
 
 #### Sacar el elemento de la posición 3
