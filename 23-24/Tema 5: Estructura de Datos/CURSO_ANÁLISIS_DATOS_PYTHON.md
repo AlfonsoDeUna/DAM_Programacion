@@ -13,3 +13,7 @@ ayude al soporte de toma de decisiones.
 4. Preparar el modelo de datos
 5. Realizar un análisis aprendizaje automático
 
+# Numpy. Pero ¿Qué es Numpy?
+
+
+
