@@ -39,3 +39,5 @@ Numpy, es un paquete para realizar computación científica y operaciones y cál
 ``` python
 
 ```
+
+#### Ejercicio 4: Crea un array 5x5 de zeros
