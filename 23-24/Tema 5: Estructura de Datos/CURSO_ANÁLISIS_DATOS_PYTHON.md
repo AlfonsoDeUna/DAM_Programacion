@@ -8,5 +8,8 @@ ayude al soporte de toma de decisiones.
 # ¿Qué pasos tenemos que dar para realizar un análisis exploratorio de datos?
 
 1. Transformar los datos como llegan al formato que necesito
-2. 
+2. Limpieza de datos (preprocesado de la información)
+3. Visualización de los datos
+4. Preparar el modelo de datos
+5. Realizar un análisis aprendizaje automático
 
