@@ -15,8 +15,12 @@ ayude al soporte de toma de decisiones.
 
 # Numpy. Pero ¿Qué es Numpy?
 
-Numpy, es un paquete para realizar computación científica y operaciones y cálculos
+Numpy, es un paquete para realizar computación científica y operaciones y cálculos.
 
-## Estructura un Array de una dimensión. Un vector
+## Estructuras Array Numpy
 
-#### Crea un array de una dimensión.
+#### Crea un array de una dimensión. (Vector)
+
+```python
+
+```
