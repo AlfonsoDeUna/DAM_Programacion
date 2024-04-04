@@ -33,6 +33,9 @@ Numpy, es un paquete para realizar computación científica y operaciones y cál
 
 #### Ejercicio 3: Crea un vector y un array a partir de la siguiente lista
 [1,11,111,1111]
+
+*pista tienes que crear una lista y utilizar np.array()*
+
 ``` python
 
 ```
