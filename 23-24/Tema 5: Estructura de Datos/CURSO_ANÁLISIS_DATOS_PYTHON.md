@@ -15,5 +15,7 @@ ayude al soporte de toma de decisiones.
 
 # Numpy. Pero ¿Qué es Numpy?
 
+Numpy, es un paquete para realizar computación científica y operaciones y cálculos
+
 
 
