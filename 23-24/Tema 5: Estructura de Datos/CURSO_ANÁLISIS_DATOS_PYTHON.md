@@ -84,4 +84,19 @@ Escribe aquí tu explicación:
 ``` python
 
 ```
-#### Ejercicio 10: Crea un array de ceros de 3x3. A partir de ese array prueba el atributo shape, ndim, y itemsize. Explica que nos dicen estos atributos sobre la estructura
+#### Ejercicio 11: Crea un array de ceros de 3x3. A partir de ese array prueba el atributo shape, ndim, y itemsize. Explica que nos dicen estos atributos sobre la estructura
+
+
+# LEER Y ESCRIBIR EN FICHEROS
+
+descarga el siguiente fichero que es una base de datos de huracanes
+
+https://github.com/rmcelreath/rethinking/blob/master/data/Hurricanes.csv
+
+```python
+arr_csv = np.genfromtxt('./Hurricanes.csv', delimiter = ',')
+np.savetxt('newfilex.csv', arr_csv, delimiter = ',')
+```
+
+Explcia que hace este código
+
