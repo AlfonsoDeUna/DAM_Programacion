@@ -19,7 +19,7 @@ Numpy, es un paquete para realizar computación científica y operaciones y cál
 
 ## Estructuras Array Numpy
 
-#### Crea un array de una dimensión. (Vector)
+#### Ejercicio 1: Crea un array de una dimensión. (Vector)
 
 ```python
 
