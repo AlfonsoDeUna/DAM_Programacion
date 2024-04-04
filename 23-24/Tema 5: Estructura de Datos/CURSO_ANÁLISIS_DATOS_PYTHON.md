@@ -17,5 +17,6 @@ ayude al soporte de toma de decisiones.
 
 Numpy, es un paquete para realizar computación científica y operaciones y cálculos
 
+## Estructura un Array de una dimensión. Un vector
 
-
+#### Crea un array de una dimensión.
