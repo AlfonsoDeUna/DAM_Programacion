@@ -24,3 +24,9 @@ Numpy, es un paquete para realizar computación científica y operaciones y cál
 ```python
 
 ```
+
+#### Ejercicio 2: Crea un array de dos dimensiones. (Array)
+
+```python
+
+```
