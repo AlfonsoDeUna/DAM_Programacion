@@ -50,3 +50,5 @@ Numpy, es un paquete para realizar computación científica y operaciones y cál
  ```python
 
 ```
+
+#### Ejercicio 6: Crea un array de 8 elementos de 2x2x2 de ceros (Tensor)
