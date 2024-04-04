@@ -69,3 +69,19 @@ Numpy, es un paquete para realizar computación científica y operaciones y cál
 ``` python
 
 ```
+
+#### Ejercicio 9: Explica el siguiente código:
+
+``` python
+arr7 = np.arange(20)
+print(arr7[2:])
+```
+
+Escribe aquí tu explicación:
+
+#### Ejercicio 10: Utilizando lo anterior a partir del arr7 quiero obtener una lista que va de 0 a 15
+
+``` python
+
+```
+#### Ejercicio 10: Crea un array de ceros de 3x3. A partir de ese array prueba el atributo shape, ndim, y itemsize. Explica que nos dicen estos atributos sobre la estructura
