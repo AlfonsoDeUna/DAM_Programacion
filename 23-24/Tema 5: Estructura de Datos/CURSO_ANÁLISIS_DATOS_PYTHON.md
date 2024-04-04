@@ -63,3 +63,9 @@ Numpy, es un paquete para realizar computación científica y operaciones y cál
 ```python
 
 ```
+
+#### Ejercicio 8: crea un vector de 20 elementos y mediante el método slice() crea otro vector a partir del vector de 20 elementos que empiece en 1, termine en 10 y tenga los números de dos en dos
+
+``` python
+
+```
