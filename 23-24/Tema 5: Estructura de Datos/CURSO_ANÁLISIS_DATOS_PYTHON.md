@@ -46,3 +46,7 @@ Numpy, es un paquete para realizar computación científica y operaciones y cál
 ```
 
 #### Ejercicio 5: Crea un vector cuyo límite inferior sea 0 y el límite superior sea 20 y tenga 5 elementos comprendidos en ese intervalo que sean liealmente iguales
+
+ ```python
+
+```
