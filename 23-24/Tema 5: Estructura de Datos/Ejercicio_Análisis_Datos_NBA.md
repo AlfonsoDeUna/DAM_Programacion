@@ -56,7 +56,7 @@ tu código:
 df.sort_values(by="Total day minutes", ascending=False).head()
 ```
 
-### Saca la media de minutos al día. mean()
+### Saca la media de edad de los jugadores de la NBA. mean()
 ejemplo
 ```python
 df["columna"].mean()
