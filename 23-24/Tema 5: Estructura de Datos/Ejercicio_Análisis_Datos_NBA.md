@@ -78,7 +78,7 @@ ana_df=df[col_need]
 ana_df
 ```
 
-### quitar repetidos
+### quitar datos repetidos
 
 tu código:
 ```python
