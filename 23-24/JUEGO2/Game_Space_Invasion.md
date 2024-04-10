@@ -134,6 +134,7 @@ class Ship:
 ```
 
 Crea una carpeta image dentro de la carpeta principal del juego y añade la nave que la dejo aquí como ship.bmp (descárgala y ponla en la carpeta)
+La imagen de la nave te la he dejado en github dentro de la carpeta images con el nombre ship.bmp descárgala de aquí y ponla en la carpeta images en visual Studio Code
 
 ### Vamos a añadir la clase ship.py al juego para ello importamos la clase en invasionalieligena.py
 
@@ -141,8 +142,128 @@ Crea una carpeta image dentro de la carpeta principal del juego y añade la nave
 from ship import ship
 ```
 
+Añade en el constructor de invasionalieligena.py una instancia de la nave con la variable de instancia ship, te dejo el código
 
+```python
+self.ship = Ship(self)
+```
+Ahora en el bucle principald el juego en invasionalieligena.py después del método screen.fill() que rellena de color la pantalla principal vamos a pintar la nave
+copia el siguiente código que llama al método blitme que dibuja la nave gracias al método blit que pusimos dentro de este métoodo en ship
 
+```python
+self.ship.blitme()
+```
 
+### PRUEBA ESTE CÓDIGO, DALE A EJECUTAR, SE TIENE QUE VER LA NAVE PERO CLARO, NO SE MUEVE ,JEJEJE, AHORA TENEMOS QUE AÑADIR LOS EVENTOS PARA QUE CUANDO
+PULSEMOS UNA TECLA LA TENGMAOS IDENTIFICADA Y PODAMOS MOVER LA NAVE PRINCIPAL...
 
+### 6. EVENTOS
 
+Crea este método después del método de clase run_game () de la clase invasionalieligena.py
+
+```python
+ def _check_events(self):
+        """método que responde a los eventos que se producen en la pantalla del juego"""
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+```
+
+Claro, este método copia el código que tienes que quitar de run_game() de los eventos y en vez de ese código ahora debes llamar a ese método dentro
+del run_game(), pon esto, justo debajo del while (true) que es bucle principal y quitas las líneas repetidas en este método que por tanto llamará:
+
+``` python
+self._check_events()
+```
+
+Ahora pasa lo mismo con el código que tiene run_time para pintar en pantalla todos los métodos blint() vamos a crear un método debajo del método check_events()
+y añadimos este:
+
+```python
+    def _update_screen(self):
+        """Actualiza las imágenes de pantalla y pinta la nueva pantalla."""
+        self.screen.fill(self.settings.bg_color)
+        self.ship.blitme()
+        pygame.display.flip()
+```
+
+Ahroa tienes que quitar estas líneas de run_game() y sustituirlo por el método _update_screen(), por tanto run_game() quedará así
+
+```python
+def run_game(self):
+
+    while True:
+        self._check_events()
+        self._update_screen()
+        self.clock.tick(60)
+```
+
+### 6. Añadir movimiento a la nave derecha e izquierda
+
+Añade al método check events el siguiente código, movemos a la nave un pixel a la derecha por eso sumamos uno
+
+```python
+elif event.type == pygame.KEYDOWN:
+    if event.key == pygame.K_RIGHT:
+        self.ship.rect.x += 1
+```
+
+El método quedará así:
+
+```python
+    def _check_events(self):
+        """método que responde a los eventos que se producen en la pantalla del juego"""
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RIGHT:
+                    self.ship.rect.x += 1
+```
+
+### Ahora, a ver si eres capaz, de añadir hacia la izquierda, ten en cuenta que restaremos un pixel ;)
+
+### PRUEBA EL CÓDIGO, EJECÚTALO Y MIRA SI ERES CAPAZ DE MOVER LA NAVE
+
+### 7. Movimiento contínuo, simplemente dejando el cursor derecha pulsado seguirá la nave moviéndose y no hace falta estar pulsando muchas veces la tecla
+
+Crea en el constructor de la clase ship.py el atributo de instancia moving_right = False
+
+Y crea el siguiente método en ship.py
+
+```python
+def update(self):
+    # actualiza el movimiento de la nave dependiendo si la variable right es true
+    if self.moving_right:
+        self.rect.x += 1
+```
+
+En la clase invasionalieligena.py deberás modificar el metodo check_events() por este código que modfiica el valor el valor
+de la variable de instancia de la nave moving_right
+
+```python
+    def _check_events(self):
+        """método que responde a los eventos que se producen en la pantalla del juego"""
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RIGHT:
+                    self.ship.moving_right = True
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_RIGHT:
+                    self.ship.moving_right = False
+```
+
+Y en el método run_game de invasionalieligena.py añade self.ship.update() para que llame al método update de ship para que se pueda mover la nave.
+El método run_game quedará así:
+
+```python
+def run_game(self):
+        """Start the main loop for the game."""
+        while True:
+            self._check_events()
+            self.ship.update()
+            self._update_screen()
+            self.clock.tick(60)
+```
