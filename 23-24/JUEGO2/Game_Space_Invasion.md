@@ -1,6 +1,8 @@
 # Creación de un juego en Pygame
 
-## Crea InvasionAlieligena.py
+Crea una carpeta que ponga Game_space y lo abres en Visual Studio Code para crear el juego
+
+## 1. Crea InvasionAlieligena.py copia este código en la carpeta del juego recien creada
 
 ```python
 import sys
@@ -11,20 +13,20 @@ class AlienInvasion:
     """Overall class to manage game assets and behavior."""
 
     def __init__(self):
-        """Initialize the game, and create game resources."""
+        """CONSTRUCTOR DEL JUEGO DONDE INICIALIZAMOS LAS VARIABLES MÁS IMPORTANTES."""
         pygame.init()
         self.screen = pygame.display.set_mode((largo, ancho))
-        pygame.display.set_caption("Invasion Aliligena")
+        pygame.display.set_caption("tÍTULO DE LA PANTALLA DEL JUEGO")
 
     def run_game(self):
-        """Start the main loop for the game."""
+        """BUCLE PRINCIPAL DEL JUEGO"""
         while True:
         # Watch for keyboard and mouse events.
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
                     
-        # Make the most recently drawn screen visible.
+        # flip() es eñ emcargadp de dibujar los elementos del juego 
         pygame.display.flip()
 
 if __name__ == '__main__':
@@ -33,8 +35,9 @@ if __name__ == '__main__':
     ai.run_game()
 ```
 
-### A partir del código inicial añade los siguientes cambios para dar forma a la pantalla principal del juego
+### 2. A partir del código inicial añade los siguientes cambios para dar forma a la pantalla principal del juego
 
 * añade al método set_mode del constructor que la pantalla sea de 1200, 800 píxeles
 * añade al caption para que tenga un título que ponga Invasión alieligena
-* 
+
+### EJECUTA EL PYTHON
