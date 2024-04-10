@@ -44,6 +44,42 @@ tu código:
 
 ```
 
+### Cuenta los valores de la columna edad. value_conts()
+
+``` python
+
+```
+
+### Qué jugador tiene más minutos. sort_values() => Ordena valores
+
+```python
+df.sort_values(by="Total day minutes", ascending=False).head()
+```
+
+### Saca la media de minutos al día. mean()
+ejemplo
+```python
+df["columna"].mean()
+```
+tu código:
+```python
+
+```
+
+### Saca la media de los jugadores estadounidenses
+```python
+df[df["NOMBRE_COLUMNA"] == "VALOR"].mean()
+```
+tu código:
+```python
+
+```
+
+### Añade alguna columna más para que ordene
+
+Cuenta cuantos valores hay de alguna columna más
+
+
 ## Paso 3: Undrafted. Jugadores que no han sido elegidos a través de este sorteo, a lo largo de la historia se han desarrollado varios “robos” o jugadores que han dejado huella en la liga,
 
 ```python
@@ -109,6 +145,11 @@ pd.plotting.scatter_matrix(ana_df,figsize=(20,20),alpha=0.5);
 #better visualization
 import seaborn as sns
 sns.pairplot(ana_df)
+```
+
+### gráfico para contabilizar 
+```python
+sns.countplot(x="COLUMNA", hue="COLUMNA", data=df);
 ```
 
 ## Paso 8: Crea dos o tres visualizaciones con  el dataframe que quiereas el inicial o este último mostrando información contenida en él.
