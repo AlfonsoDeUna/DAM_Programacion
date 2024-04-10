@@ -135,6 +135,12 @@ class Ship:
 
 Crea una carpeta image dentro de la carpeta principal del juego y añade la nave que la dejo aquí como ship.bmp (descárgala y ponla en la carpeta)
 
+### Vamos a añadir la clase ship.py al juego para ello importamos la clase en invasionalieligena.py
+
+```python
+from ship import ship
+```
+
 
 
 
