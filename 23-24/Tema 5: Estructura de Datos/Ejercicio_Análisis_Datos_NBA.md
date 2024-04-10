@@ -158,3 +158,8 @@ Pon aquí tu código.
 ```python
 
 ```
+# Refereencias
+
+* https://www.kaggle.com/code/chats351/introduction-to-numpy-pandas-and-matplotlib
+* https://www.kaggle.com/code/kashnitsky/topic-1-exploratory-data-analysis-with-pandas
+  
