@@ -198,7 +198,7 @@ def run_game(self):
         self.clock.tick(60)
 ```
 
-### 6. Añadir movimiento a la nave derecha e izquierda
+### 7. Añadir movimiento a la nave derecha e izquierda- Pero primero vamos a añadir que se mueva a la derecha y movimiento contínuo de la nave
 
 Añade al método check events el siguiente código, movemos a la nave un pixel a la derecha por eso sumamos uno
 
@@ -221,7 +221,6 @@ El método quedará así:
                     self.ship.rect.x += 1
 ```
 
-### Ahora, a ver si eres capaz, de añadir hacia la izquierda, ten en cuenta que restaremos un pixel ;)
 
 ### PRUEBA EL CÓDIGO, EJECÚTALO Y MIRA SI ERES CAPAZ DE MOVER LA NAVE
 
@@ -267,3 +266,5 @@ def run_game(self):
             self._update_screen()
             self.clock.tick(60)
 ```
+
+### Ahora, a ver si eres capaz, de añadir hacia la izquierda, ten en cuenta que restaremos un pixel ;) en ship y hay que tener una variable moving_left que controle el movimiento continuo hacia la izquierda.
