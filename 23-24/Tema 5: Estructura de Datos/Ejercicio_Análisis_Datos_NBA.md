@@ -2,7 +2,7 @@
 
 Descarga el fichero archive.zip
 
-## Paso 1: Leer el fichero y mostar el data frame
+## Paso 1: Leer el fichero y mostrar el data frame
 
 puedes utilizar:
 ``` python
@@ -14,7 +14,7 @@ tu código:
 
 ```
 
-### ¿Cuántas filas y columnas? a través del dataframe muestra estsa información
+### ¿Cuántas filas y columnas? a través del dataframe muestra esta información
 
 tu código: 
 ``` pyhton
