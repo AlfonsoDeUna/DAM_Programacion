@@ -99,7 +99,7 @@ Añade al constructor de invasionaliligena.py la instancia a settings y modifica
 ```python
 from settings import Settings
 ```
-Dentro del constructor
+Dentro del constructor de invasionalieligena.py
 
 ```python
 self.settings = Settings()
