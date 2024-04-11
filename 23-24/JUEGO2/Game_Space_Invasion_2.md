@@ -34,8 +34,8 @@ Las balas son rectángulos que tienen un width y un height más adelante podemos
 Vamos a añadirle dos parámetros a las balas color de las balas y velocidad de las mismas
 
 ```python
-    self.color = 
-    self.speed_factor =
+    self.color = (0,0,0)
+    self.speed_factor = 2
 ```
 
 Ahora vamos a crear los dos métodos que creamos para nuestros objetos del juego uno de ellos update () para actualizar su posición
