@@ -93,6 +93,16 @@ def draw_bullet(self):
         pygame.draw.rect(self.screen, self.color, self.rect)
 ```
 
+#### Añadir los bullets en el programa principal invasionmarciana.py en el bucle principal vamos a crear grupos de pygame
+
+Los grupos es una estructura para tratar varios sprites a la vez.
+
+```python
+
+from pygame.sprite import Group
+
+```
+
 ### 4.1 CREAR LOS ATRIBUTOS DE SETTINGS PARA LOS DISPAROS 
 
 ### 4.2 CREAR LA CLASE MISILES.PY
