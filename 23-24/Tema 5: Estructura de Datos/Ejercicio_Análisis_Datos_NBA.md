@@ -65,7 +65,7 @@ df["columna"].mean()
 ```
 tu código:
 ```python
-
+print(df["age"].mean())
 ```
 
 ### Saca la media de los jugadores estadounidenses
@@ -74,7 +74,7 @@ df[df["NOMBRE_COLUMNA"] == "VALOR"].mean()
 ```
 tu código:
 ```python
-
+ print(df[df["country"] == "USA"]["age"].mean())
 ```
 
 ### Añade alguna columna más para que ordene
@@ -93,7 +93,8 @@ df_season_wise['draft_year']=df_season_wise['draft_year'].replace('Undrafted',np
 
 tu código: 
 ``` pyhton
-
+df['draft_round'] = df['draft_round'].replace('Undrafted', np.NaN) 
+df['draft_number'] = df['draft_number'].replace('Undrafted', np.NaN)
 ```
 
 ## Paso 4: Muestra las estadísticas de la tabla
@@ -101,7 +102,7 @@ tu código:
 
 tu código: 
 ``` pyhton
-
+print(df.describe())
 ```
 
 ## Paso 5: Seleccionamos las columnas 
