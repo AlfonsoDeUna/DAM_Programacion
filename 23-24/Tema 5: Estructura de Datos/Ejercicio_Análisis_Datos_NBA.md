@@ -159,7 +159,10 @@ sns.countplot(x="COLUMNA", hue="COLUMNA", data=df);
 
 Pon aquí tu código.
 ```python
-
+posicion_puntos =df.plot(x="position", y="pts", kind="bar")
+plt.show()
+posicion_puntos =df.plot(x="position", y="pts", kind="point")
+plt.show()
 ```
 # Refereencias
 
