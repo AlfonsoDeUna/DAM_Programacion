@@ -11,14 +11,16 @@ df=pd.read_csv(
 
 tu código: 
 ``` pyhton
-
+df = pd.read_csv("C:/Users/thepi/Desktop/Python/arrays/all_seasons.csv")
+print(df.to_string())
 ```
 
 ### ¿Cuántas filas y columnas? a través del dataframe muestra esta información
 
 tu código: 
 ``` pyhton
-
+print(df.shape[0])
+print(df.shape[1])
 ```
 
 ## Paso 2: Quitar valores NULL (o valores nulos)
@@ -35,7 +37,7 @@ df.shape
 
 tu código: 
 ``` pyhton
-
+print(df.info())
 ```
 
 ### Crea un índice de la columan season
