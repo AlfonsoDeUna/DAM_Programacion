@@ -43,13 +43,13 @@ print(df.info())
 ### Crea un índice de la columan season
 
 ``` python
-
+df.set_index("season", inplace=True)
 ```
 
 ### Cuenta los valores de la columna edad. value_conts()
 
 ``` python
-
+print(df["age"].value_counts())
 ```
 
 ### Qué jugador tiene más minutos. sort_values() => Ordena valores
