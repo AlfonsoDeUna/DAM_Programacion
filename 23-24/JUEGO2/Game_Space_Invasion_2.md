@@ -74,27 +74,7 @@ Las balas son rectángulos que tienen un width y un height más adelante podemos
 
         # Creamos el bullet con un recuadro en la posición 0,0 pero después corregimos la posición de la mismaposition.
         self.rect = pygame.Rect(0, 0, 10, 10)
-      
 ```
-Ahora vamos a situar la bala en la posición donde se encuentra la nave, para ello dentro del constructor añade las siguientes líneas justo después donde creamos el rectángulo que será la bala del python anterior.
-
-Además vamos a añadir después la información en decimal de la posición de la bala en el eje y que es por donde se mueve. self.y = float(self.rect.y)
-
-```python
-   self.rect.centerx = ship.rect.centerx
-   self.rect.top = ship.rect.top
-   self.y = float(self.rect.y)
-```
-
-Vamos a añadirle dos parámetros a las balas color de las balas y velocidad de las mismas
-
-```python
-    self.color = (0,0,0)
-    self.speed_factor = 2
-```
-
-Ahora vamos a crear los dos métodos que creamos para nuestros objetos del juego uno de ellos update () para actualizar su posición
-dentro del juego con respecto al tiempo y otro para que dibuje la bala
 
 ```python
   def update(self):
@@ -109,15 +89,7 @@ def draw_bullet(self):
         pygame.draw.rect(self.screen, self.color, self.rect)
 ```
 
-#### Añadir los bullets en el programa principal invasionmarciana.py en el bucle principal vamos a crear grupos de pygame
 
-Los grupos es una estructura para tratar varios sprites a la vez.
-
-```python
-
-from pygame.sprite import Group
-
-```
 
 ### 4.1 CREAR LOS ATRIBUTOS DE SETTINGS PARA LOS DISPAROS 
 
@@ -131,7 +103,7 @@ self.bullet_height = 15
 self.bullet_color = (60, 60, 60)
 ```
 
-### 4.2 CREAR LA CLASE bullet.py
+### 4.2 REFACTORIZAR LA CLASE bullet.py añadiendo el settings
 
 ```python
 import pygame
@@ -144,6 +116,7 @@ class Bullet(Sprite):
     self.screen = ai_game.screen
     self.settings = ai_game.settings
     self.color = self.settings.bullet_color
+
     # Crear la bala en el rect (0, 0) .
     self.rect = pygame.Rect(0, 0, self.settings.bullet_width,
     self.settings.bullet_height)
@@ -192,6 +165,9 @@ En el fichero del juego principal importamos la clase bullet y creamos el grupo 
 ``` python
 from ship import Ship
 from bullet import Bullet
+from pygame.sprite import Group
+
+```
 ```
 
 En el bucle principal del juego:
