@@ -223,7 +223,7 @@ def _update_screen(self):
 
   self.ship.blitme()
   pygame.display.flip()
-
+```
 ## 5.1 BORRAR LOS DISPAROS ANTIGUOS
 
 El código del borrado es el siguiente: (lo pongo para explicarlo)
