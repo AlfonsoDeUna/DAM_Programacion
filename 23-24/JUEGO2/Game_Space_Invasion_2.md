@@ -226,6 +226,39 @@ def _update_screen(self):
 
 ## 5.1 BORRAR LOS DISPAROS ANTIGUOS
 
+El código del borrado es el siguiente: (lo pongo para explicarlo)
+
+```python
+for bullet in self.bullets.copy():
+  if bullet.rect.bottom <= 0:
+   self.bullets.remove(bullet)
+   print(len(self.bullets))
+```
+
+Utilizamos el copy() para que nos haga una copia y poder modificar las balas que salen del límite que sería cuando llega a la posición 0
+
+Este código tiene que estar en el bucle principal del juego.
+
+Qudaría así:
+
+```python
+
+def run_game(self):
+  """Start the main loop for the game."""
+  while True:
+   self._check_events()
+   self.ship.update()
+   self.bullets.update()
+
+    # Borrado de las balas
+   for bullet in self.bullets.copy():
+    if bullet.rect.bottom <= 0:
+      self.bullets.remove(bullet)
+      print(len(self.bullets))
+
+   self._update_screen()
+```
+
 ## 5.2 LIMITAR EL NÚMERO DE MISILES
 
 ## 6. REFACTORIZACIÓN DEL CÓDIGO PARA QUE QUEDE EL CÓDIGO MÁS BONITO
