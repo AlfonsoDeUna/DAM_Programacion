@@ -9,9 +9,21 @@ En el constructor
 self.ship_speed = 1.5
 ```
 
-
+En la clase ship.py
 ``` python
-  self.center += self.ai_settings.ship_speed_factor
+      def __init__(self, ai_game):
+    
+        self.screen = ai_game.screen
+        self.screen_rect = ai_game.screen.get_rect()
+
+        self.settings = ai_game.settings
+    
+    # Cargamos la imagen de la imagen y la asociamos a un rectángulo para que sea más fácil gestionar
+        self.image = pygame.image.load('images/ship.bmp')
+        self.rect = self.image.get_rect()
+        
+    # Posicionamos la nave en la mitad de fondo de la pantalla
+        self.rect.midbottom = self.screen_rect.midbottom
 ```
 Para la izquierda le resto el factor de velocidad 
 ```python
@@ -21,6 +33,8 @@ self.center -= self.ai_settings.ship_speed_factor
 
 Tenemos que comparar la posición de la nave del rectángulo, es decir self.rect.right que contiene el valor que tiene la nave dentro de la pantalla
 se encuentra dentro es decir es menor al valor de la pantalla. self.screen_rect.right:
+
+En ship.py...
 
 ```python
  def update(self):
