@@ -9,6 +9,7 @@ En el constructor
 self.ship_speed = 1.5
 ```
 
+
 ``` python
   self.center += self.ai_settings.ship_speed_factor
 ```
