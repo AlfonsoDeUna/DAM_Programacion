@@ -4,8 +4,9 @@
 
 ### Añadir el factor de velocidad en settings
 
+En el constructor
 ```python
-
+self.ship_speed = 1.5
 ```
 
 ``` python
