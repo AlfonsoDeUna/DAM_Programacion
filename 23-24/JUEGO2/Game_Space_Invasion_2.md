@@ -169,7 +169,6 @@ from bullet import Bullet
 from pygame.sprite import Group
 
 ```
-```
 
 En el bucle principal del juego:
 
