@@ -233,7 +233,7 @@ for bullet in self.bullets.copy():
   if bullet.rect.bottom <= 0:
    self.bullets.remove(bullet)
    print(len(self.bullets))
-```
+``` 
 
 Utilizamos el copy() para que nos haga una copia y poder modificar las balas que salen del límite que sería cuando llega a la posición 0
 
