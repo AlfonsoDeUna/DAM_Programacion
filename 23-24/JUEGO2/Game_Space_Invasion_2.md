@@ -66,6 +66,7 @@ from pygame.sprite import Sprite
 
 Las balas son rectángulos que tienen un width y un height más adelante podemos añadirlos a settings pero por ahora lo ponemos hardcodeado en el init de la clase bullet
 
+Crea el constructor que luego le añadiremos el resto del código en el punto 4.2
 ```python
  def __init__(self, screen, ship):
 
@@ -103,7 +104,7 @@ self.bullet_height = 15
 self.bullet_color = (60, 60, 60)
 ```
 
-### 4.2 REFACTORIZAR LA CLASE bullet.py añadiendo el settings
+### 4.2 COMPLEAR LA CLASE bullet.py añadiendo el settings Y DEMÁS CÓDIGO DEL CONSTRUCTOR
 
 ```python
 import pygame
