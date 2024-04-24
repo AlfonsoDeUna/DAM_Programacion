@@ -106,9 +106,9 @@ def _create_fleet(self):
       self._create_alien(current_x, current_y)
       current_x += 2 * alien_width
 
-  # finzaliza la línea
-  current_x = alien_width
-  current_y += 2 * alien_height
+    # finzaliza la línea
+    current_x = alien_width
+    current_y += 2 * alien_height
 
 ```
 
