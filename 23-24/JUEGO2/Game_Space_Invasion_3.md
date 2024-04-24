@@ -91,7 +91,8 @@ PRUÉBALO AHORA. TIENES QUE VER UNA LÍNEA DE ALIENS
 
 ### 2.1 CREAR FILAS DE ALIENS
 
-copia de nuevo y sustituye el código de antes ahora intenta añadir una línea 
+copia de nuevo y sustituye el código de antes ahora intenta añadir una línea  
+Este código es el python principal del juego invasionalieligena.py
 
 ```python
 def _create_fleet(self):
