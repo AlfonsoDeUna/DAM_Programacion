@@ -230,6 +230,39 @@ def _update_aliens(self):
 
 ## 4. DISPARANDO A LOS ALIENS !!
 
+En primer lugar modifica la velocidad de las balas. En settings.py modifica este párametro al valor 2.5
+
+```python
+# Bullet settings
+self.bullet_speed = 2.5
+self.bullet_width = 3
+```
+
+Podemos refactorizar el código un poco para mejorarlo. La parte de la actualización de las balas para añadir nuevo código
+Quedaría así el método _update_bullets() del programa principal le añadimos un método _check_bullet_alien_collisions()
+
+La idea es que cuando detectemos que los grupos colisionan nos lo da sprites cuando se detectan los recuadros de los alines y las balas
+es que están juntos o superpuestos y es como que le ha tocado la bala al alien
+
+```python
+
+def _update_bullets(self):
+
+  for bullet in self.bullets.copy():
+  if bullet.rect.bottom <= 0:
+  self.bullets.remove(bullet)
+  ######################## este código anterior ya existe no toques nada añde el método este:
+  self._check_bullet_alien_collisions()
+
+def _check_bullet_alien_collisions(self):
+
+  # Remove any bullets and aliens that have collided.
+  collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
+  if not self.aliens:
+    # Destroy existing bullets and create new fleet.
+    self.bullets.empty()
+    self._create_fleet()
+```
 ### 4.1 TRUCO PARA TESTEAR EL JUEGO. MODIFICANDO LOS MISÍLES DE DESTRUCCIÓN MASIVA DE ALIENS
 
 ## 5. OH SHIT!! LOS ALIENS SE MULTIPLICAN !!!
