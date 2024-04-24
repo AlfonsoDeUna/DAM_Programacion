@@ -2,6 +2,29 @@
 
 ## 1. CREAR LA CLASE ALIENS
 
+
+```python
+
+import pygame
+from pygame.sprite import Sprite
+
+class Alien(Sprite):
+  
+  def __init__(self, ai_game):
+ 
+    super().__init__()
+    self.screen = ai_game.screen
+
+      # Cargamos la imagen de los alien.
+self.image = pygame.image.load('images/alien.bmp')
+self.rect = self.image.get_rect()
+# Start each new alien near the top left of the screen.
+1 self.rect.x = self.rect.width
+self.rect.y = self.rect.height
+# Store the alien's exact horizontal position.
+2 self.x = float(self.rect.x)
+```
+
 ### 1.1 INSTANCIAR EN EL JUEGO LOS ALIENS
 
 ## 2. CONSTRUIR UNA FLOTA DE ALIENS
