@@ -127,9 +127,106 @@ PRUEBA AHORA
 
 ## 3. AÑADIR MOVIMIENTO A LOS ALIENS
 
-### 3.1 MOVER A LA DERECHA LOS ALIENS
+Añade al settings.py la propiedad velocidad de los aliens en el constructor
+
+```python
+# Alien settings
+self.alien_speed = 1.0
+```
+
+En aliens.py en su constructor añade los settings de la clase settings
+
+```python
+def __init__(self, ai_game):
+super().__init__()
+self.screen = ai_game.screen
+self.settings = ai_game.settings
+##### hay más código después
+```
+
+```python
+def update(self):
+  # mueve a la derecha el alien
+  self.x += self.settings.alien_speed
+  self.rect.x = self.x
+
+```
+y ya por último añadir el update en la clase principal del juego dentro del bucle del juego
+
+```python
+while True:
+  self._check_events()
+  self.ship.update()
+  self._update_bullets()
+  self._update_aliens()
+  self._update_screen()
+  self.clock.tick(60)
+```
+
+y crea el método _update_aliens(self): en la clase principal del juego ya que en el código anterior hemos hecho la llamada
+
+```python
+def _update_aliens(self):
+  """Update the positions of all aliens in the fleet."""
+  self.aliens.update()
+```
+
+En settings por útlimo añade los siguiente parámetros para la dirección de los aliens
+
+```python
+# Alien settings
+self.alien_speed = 1.0
+self.fleet_drop_speed = 10
+# fleet_direction of 1 represents right; -1 represents left.
+self.fleet_direction = 1
+```
 
 ### 3.2 DETECTAR LOS LÍMITES DE PANTALLA PARA LOS MOVIMIENTOS DE LA FLOTA DE ALIENS Y CAMBIO DE SENTIDO
+
+En el alien.py tienes que crear este método check_edges(self): Está mirando los límites
+
+```python
+
+def check_edges(self):
+  screen_rect = self.screen.get_rect()
+  eturn (self.rect.right >= screen_rect.right) or (self.rect.left <= 0)
+
+```
+
+En el update de alien.py tienes que poner este código
+
+```python
+def update(self):
+  # Mueve el alien a la derecha o a la izquierda dependiendo del valor del fleet_direction
+  self.x += self.settings.alien_speed * self.settings.fleet_direction
+  self.rect.x = self.x
+ ```
+
+En el programa principal crea los métodos check_fleet_edges(self) y change_fleet_direction(self):
+
+```python
+def _check_fleet_edges(self):
+"""Si detecta un borde los alines cambia la dirección"""
+  for alien in self.aliens.sprites():
+    if alien.check_edges():
+      self._change_fleet_direction()
+      break
+
+def _change_fleet_direction(self):
+  """Cambio de la dirección"""
+  for alien in self.aliens.sprites():
+    alien.rect.y += self.settings.fleet_drop_speed
+  self.settings.fleet_direction *= -1
+```
+
+Y por último en el programa principal también hay que modificar el método _upadte_aliens(self) que hemos creado anteriormente
+para que tenga en cuenta los cambios de dirección de los alines
+
+```python
+def _update_aliens(self):
+  self._check_fleet_edges()
+  self.aliens.update()
+```
 
 ## 4. DISPARANDO A LOS ALIENS !!
 
