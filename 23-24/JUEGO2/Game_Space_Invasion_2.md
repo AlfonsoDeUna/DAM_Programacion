@@ -261,6 +261,43 @@ def run_game(self):
 
 ## 5.2 LIMITAR EL NÚMERO DE MISILES
 
+En el constructor de settings.py añade esta línea:
+
+```python
+self.bullets_allowed = 3
+```
+
+Y en el método _fire_bullet(self) del python principal hay que añadir el siguiente condicional
+
+if len(self.bullets) < self.settings.bullets_allowed:
+
+Quedaría así...
+
+```python
+
+def _fire_bullet(self):
+  
+ if len(self.bullets) < self.settings.bullets_allowed:
+  new_bullet = Bullet(self)
+  self.bullets.add(new_bullet)
+```
+
+
+
 ## 6. REFACTORIZACIÓN DEL CÓDIGO PARA QUE QUEDE EL CÓDIGO MÁS BONITO
 
+Crea un método _update_bullets(self):
 
+para sacar del bucle principal el código de los disparos y llamas a ese método.
+
+```python
+
+def _update_bullets(self):
+
+  # Update bullet positions.
+  self.bullets.update()
+  # Get rid of bullets that have disappeared.
+  for bullet in self.bullets.copy():
+   if bullet.rect.bottom <= 0:
+    self.bullets.remove(bullet)
+```
