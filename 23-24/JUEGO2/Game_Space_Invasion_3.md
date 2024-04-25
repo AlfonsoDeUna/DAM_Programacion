@@ -314,4 +314,163 @@ def _update_aliens(self):
   # Look for alien-ship collisions.
   if pygame.sprite.spritecollideany(self.ship, self.aliens):
     print("Ship hit!!!")
+```
 
+Crea la clase game_stats.py
+
+```python
+
+class GameStats:
+  """ Recoge as estadísticas """
+  def __init__(self, ai_game):
+    """Initialize statistics."""
+    self.settings = ai_game.settings
+    self.reset_stats()
+
+def reset_stats(self):
+  """ vida."""
+  self.ships_left = self.settings.ship_limit
+```
+
+mete en settings.py
+
+```python
+
+self.ship_limit = 3
+
+```
+
+En el programa principal añade los siguiente imports
+
+```python
+
+from time import sleep
+from game_stats import GameStats
+
+```
+
+Añade al programa principal en el __init__
+
+```python
+
+# Create an instance to store game statistics.
+self.stats = GameStats(self)
+
+```
+
+crea la siguiente función:
+
+```python
+
+def _ship_hit(self):
+""" La nave ha sido alcanzada """
+  # Decrement la vidas
+  self.stats.ships_left -= 1
+  # no tienes balas y reseteas
+  self.bullets.empty()
+  self.aliens.empty()
+
+  # nueva posición
+  self._create_fleet()
+  self.ship.center_ship()
+
+  # hacemos una pausa
+   sleep(0.5)
+
+```
+
+Ahora añade en el método update_aliens en el if de la colisión entre la nave y los aliens llama a _ship_hit()
+
+```python
+
+def _update_aliens(self):
+  # más código ....
+  if pygame.sprite.spritecollideany(self.ship, self.aliens):
+    self._ship_hit()
+
+```
+
+Y añade el método de centrado de la nave en ship.py
+
+```python
+
+def center_ship(self):
+  """Center the ship on the screen."""
+  self.rect.midbottom = self.screen_rect.midbottom
+  self.x = float(self.rect.x)
+
+```
+
+## Los aliens alcanzan el fondo de la pantalla
+
+En el programa principal tiene sque añadir:
+
+```python
+
+def _check_aliens_bottom(self):
+  """Check if any aliens have reached the bottom of the screen."""
+  for alien in self.aliens.sprites():
+    if alien.rect.bottom >= self.settings.screen_height:
+      # Treat this the same as if the ship got hit.
+      self._ship_hit()
+      break
+
+```
+
+Añade al final del método update_aliens del programa principal
+
+```python
+
+def _update_aliens(self):
+  #hay código por aquí
+  # Look for alien-ship collisions.
+  if pygame.sprite.spritecollideany(self.ship, self.aliens):
+    self._ship_hit()
+    # AÑADE ESTA LÍNEA DESPUÉS DEL SELF._SHIP_HIT()
+    self._check_aliens_bottom()
+
+## GAME OVER
+
+CREA EN EL CONSTRUCTOR ESTA LÍNEA QUE ES QUE EL JUEGO ESTÁ ACTIVO
+
+```python
+
+self.game_active = True
+
+```
+
+Actualiza ahora el ship_hit():
+
+```python
+
+def _ship_hit(self):
+  """Respond to ship being hit by alien."""
+  if self.stats.ships_left > 0:
+    # Decrement ships_left.
+    self.stats.ships_left -= 1
+
+      #por aquí hay más código que has puesto anteriormente
+
+   # Pause.
+    sleep(0.5)
+  else:
+    self.game_active = False
+
+```
+
+Y añade en el bucle principal del programa principal de juego un if mirando si el juego está activo 
+
+```python
+
+def run_game(self):
+# bucle principal
+while True:
+self._check_events()
+  if self.game_active:
+    self.ship.update()
+    self._update_bullets()
+    self._update_aliens()
+    self._update_screen()
+    self.clock.tick(60)
+
+```
