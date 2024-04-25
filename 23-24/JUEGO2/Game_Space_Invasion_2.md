@@ -178,6 +178,13 @@ from pygame.sprite import Group
 
 ```
 
+En el __init__ del programa principal del juego hay que poner, es decir, añadir esto...
+```python
+
+self.bullets = pygame.sprite.Group()
+
+```
+
 En el bucle principal del juego:
 
 ```python
