@@ -305,3 +305,13 @@ def update_aliens(ai_settings, aliens):
 
 ## 7. ¡¡ NOS ATACAN LOS ALIENS !! FIN DEL JUEGO. GAME OVER!
 
+programa principal del python hay que poner
+
+```python
+def _update_aliens(self):
+  --snip--
+  self.aliens.update()
+  # Look for alien-ship collisions.
+  if pygame.sprite.spritecollideany(self.ship, self.aliens):
+    print("Ship hit!!!")
+
