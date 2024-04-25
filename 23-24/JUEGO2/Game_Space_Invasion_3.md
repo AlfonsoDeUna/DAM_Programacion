@@ -279,6 +279,24 @@ def update(self):
   self.rect.x = self.x
 ```
 
+Cuando lo detecte que cambie de sentido el moviento de los aliens... en el python principal del juego
+
+```python
+def check_fleet_edges(ai_settings, aliens):
+  for alien in aliens.sprites():
+    if alien.check_edges():
+      change_fleet_direction(ai_settings, aliens)
+      break
+
+def change_fleet_direction(ai_settings, aliens):
+  for alien in aliens.sprites():
+    alien.rect.y += ai_settings.fleet_drop_speed
+  ai_settings.fleet_direction *= -1
+
+def update_aliens(ai_settings, aliens):
+  check_fleet_edges(ai_settings, aliens)
+  aliens.update()
+
 ## 5. OH SHIT!! LOS ALIENS SE MULTIPLICAN !!!
 
 ## 6. OTRAS MODIFICACIONES
