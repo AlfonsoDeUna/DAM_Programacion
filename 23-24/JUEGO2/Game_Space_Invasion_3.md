@@ -264,7 +264,20 @@ def _check_bullet_alien_collisions(self):
     self.bullets.empty()
     self._create_fleet()
 ```
-### 4.1 TRUCO PARA TESTEAR EL JUEGO. MODIFICANDO LOS MISÍLES DE DESTRUCCIÓN MASIVA DE ALIENS
+### mejora los límites de los aliens en las paredes
+```python
+
+def check_edges(self):
+  screen_rect = self.screen.get_rect()
+    if self.rect.right >= screen_rect.right:
+      return True
+    elif self.rect.left <= 0:
+      return True
+
+def update(self):
+  self.x += (self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction)
+  self.rect.x = self.x
+```
 
 ## 5. OH SHIT!! LOS ALIENS SE MULTIPLICAN !!!
 
