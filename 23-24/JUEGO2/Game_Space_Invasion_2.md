@@ -89,7 +89,7 @@ Crea el constructor que luego le añadiremos el resto del código en el punto 4.
   def update(self):
         """Move the bullet up the screen."""
         # Update the decimal position of the bullet.
-        self.y -= self.speed_factor
+        self.y -= 3
         # Update the rect position.
         self.rect.y = self.y
 
