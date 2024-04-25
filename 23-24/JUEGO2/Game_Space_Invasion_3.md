@@ -297,11 +297,6 @@ def update_aliens(ai_settings, aliens):
   check_fleet_edges(ai_settings, aliens)
   aliens.update()
 
-## 5. OH SHIT!! LOS ALIENS SE MULTIPLICAN !!!
-
-## 6. OTRAS MODIFICACIONES
-
-### 6.1 LA VELOCIDAD DE LOS MISILES
 
 ## 7. ¡¡ NOS ATACAN LOS ALIENS !! FIN DEL JUEGO. GAME OVER!
 
@@ -316,7 +311,7 @@ def _update_aliens(self):
     print("Ship hit!!!")
 ```
 
-Crea la clase game_stats.py
+## 8. Crea la clase game_stats.py
 
 ```python
 
